@@ -1,0 +1,277 @@
+Experiment 1. 
+Setting Up and Basic Commands: 
+Initialize a new Git repository in a directory. Create a new file and add it to the staging 
+area and commit the changes with an appropriate commit message. 
+Solution: 
+To initialize a new Git repository in a directory, create a new file, add it to the staging area, 
+and commit the changes with an appropriate commit message, follow these steps: 
+1. Open your terminal and navigate to the directory where you want to create the Git 
+repository. 
+2. Initialize a new Git repository in that directory: 
+$ git init 
+1. Create a new file in the directory. For example, let's create a file named "my_file.txt." 
+You can use any text editor or command-line tools to create the file. 
+2. Add the newly created file to the staging area. Replace "my_file.txt" with the actual name 
+of your file: 
+$ git add my_file.txt 
+This command stages the file for the upcoming commit. 
+1. Commit the changes with an appropriate commit message. Replace "Your commit 
+message here" with a meaningful description of your changes: 
+$ git commit -m "Your commit message here" 
+Your commit message should briefly describe the purpose or nature of the changes you made. 
+For 
+example: 
+$ git commit -m "Add a new file called my_file.txt" 
+After these steps, your changes will be committed to the Git repository with the provided 
+commit message. You now have a version of the repository with the new file and its history 
+stored in Git. 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+7 
+Experiment 2. 
+Creating and Managing Branches: 
+Create a new branch named "feature-branch." Switch to the "master" branch. Merge 
+the "feature-branch" into "master." 
+Solution: 
+To create a new branch named "feature-branch," switch to the "master" branch, and merge the 
+"feature-branch" into "master" in Git, follow these steps: 
+1. Make sure you are in the "master" branch by switching to it: 
+$ git checkout master 
+1. Create a new branch named "feature-branch" and switch to it: 
+$ git checkout -b feature-branch 
+This command will create a new branch called "feature-branch" and switch to it. 
+1. Make your changes in the "feature-branch" by adding, modifying, or deleting files as 
+needed. 
+2. Stage and commit your changes in the "feature-branch": 
+$ git add . 
+$ git commit -m "Your commit message for feature-branch" 
+Replace "Your commit message for feature-branch" with a descriptive commit message for the 
+changes you made in the "feature-branch." 
+1. Switch back to the "master" branch: 
+$ git checkout master 
+1. Merge the "feature-branch" into the "master" branch: 
+$ git merge feature-branch 
+This command will incorporate the changes from the "feature-branch" into the "master" 
+branch. 
+Now, your changes from the "feature-branch" have been merged into the "master" branch. 
+Your project's history will reflect the changes made in both branches 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+8 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+9 
+Experiment 3. 
+Creating and Managing Branches: 
+Write the commands to stash your changes, switch branches, and then apply the stashed 
+changes. 
+Solution: 
+To stash your changes, switch branches, and then apply the stashed changes in Git, you can 
+use the following commands: 
+1. Stash your changes: 
+$ git stash save "Your stash message" 
+This command will save your changes in a stash, which acts like a temporary storage for 
+changes that are not ready to be committed. 
+1. Switch to the desired branch: 
+$ git checkout target-branch 
+Replace "target-branch" with the name of the branch you want to switch to. 
+To reapply the stashed changes, switch back to your original branch and execute: 
+$ git stash pop 
+If you want to remove the stash after applying it, you can use git stash pop instead of git stash 
+apply. 
+Remember to replace "Your stash message" and "target-branch" with the actual message you 
+want for your stash and the name of the branch you want to switch to. 
+You can also save stash by a name using 
+$Git stash push –m “Say-my-name” 
+To see the lists of Stash 
+$Git stash List 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+10 
+Solution 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+11 
+Experiment 4. 
+Collaboration and Remote Repositories: How 
+to create github Account: 
+https://www.youtube.com/watch?v=QUtk-Uuq9nE 
+Clone a remote Git repository to your local machine. Solution: 
+To clone a remote Git repository to your local machine, follow these steps: 
+1. Open your terminal or command prompt. 
+2. Navigate to the directory where you want to clone the remote Git repository. You can use 
+the cd command to change your working directory. 
+3. Use the git clone command to clone the remote repository. Replace <repository_url> with 
+the URL of the remote Git repository you want to clone. For example, if you were cloning 
+a repository from GitHub, the URL might look like this: 
+$ git clone <repository_url> Here's 
+a full example: 
+$ git clone https://github.com/username/repo-name.git 
+Replace https://github.com/username/repo-name.git with the actual URL of the repository 
+you want to clone. 
+1. Git will clone the repository to your local machine. Once the process is complete, you 
+will have a local copy of the remote repository in your chosen directory. 
+You can now work with the cloned repository on your local machine, make changes, and 
+push those changes back to the remote repository as needed. 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+12 
+Experiment 5. 
+Git Tag 
+Git tags are used to label certain commit objects which are major milestones in project 
+development phase like deployment of project in various environment, release codes, bug 
+fixes etc 
+Lightweight tag 
+Acts as a pointer to a particular commit. 
+Creating a lightweight tag: 
+1. Get the commit history: git log 
+2. Create a lightweight tag: git tag v1.0 <commit ID> 
+3. Get the details of the tag: git show v1.0 
+4. Similarly, create another tag for some other commit: git tag v2.0 <commit ID> 
+5. Get the names of all the tags created using tag command: git tag 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+13 
+Experiment 6 
+Exploring Git Cherry Pick 
+You can “cherry pick” any existing commit on another branch into your current 
+branch using git cherry-pick 
+1. Checkout existing branch master using git checkout master 
+2. Add a new file called “sample_3.txt” and commit this file to the branch 
+3. Use git log to explore the commit id that you would be applying to your custom 
+feature branch 
+4. One you have the commit you want to cherry pick , copy the first few chars in 
+the commit hash 
+5. Execute 
+1. git cherry-pick <commit-hash> 
+2. Git add . 
+3rd Sem, AIML, Project Management with GitLab MANUAL 14 
+Experiment 7 
+Create a account in Github and create your own repository. 
+Pushing changes to remote repository 
+1. Go to your local repository where you have been playing with git so far 
+2. Execute 
+1. git remote add origin <repository-link> 
+2. git push –f origin master 
+3. As so as you execute push command you will be prompted to login on a separate 
+window , do that and you can see that you changes are pushed to the remote 
+repository 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+15 
+Experiment 8. 
+Analyzing and Changing Git History  
+Write the command to list all commits made by the author "JohnDoe" between "2023-01-01" 
+and "2023-12-31."  
+Solution:  
+To list all commits made by the author "JohnDoe" between "2023-01-01" and "2023-12-31" in Git, 
+you can use the git log command with the --author and --since and --until options. Here's the 
+command:  
+$ git log --author="JohnDoe" --since="2023-01-01" --until="2023-12-31"  
+This command will display a list of commits made by the author "JohnDoe" that fall within the 
+specified date range, from January 1, 2023, to December 31, 2023. Make sure to adjust the author 
+name and date range as needed for your specific use case. 
+Solution: 
+$ git log --author="RANJAN V" --since="2024-01-06" --until="2024-02-06" 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+16 
+Experiment 9. 
+Analysing and Changing Git History: 
+Given a commit ID, how would you use Git to view the details of that specific commit, including the author, 
+date, and commit message? 
+Solution: 
+To view the details of a specific commit, including the author, date, and commit message, you can 
+use the git show or git log command with the commit ID. Here are both options: 
+1. Using git show: 
+In bash 
+git show <commit-ID> 
+Replace <commit-ID> with the actual commit ID you want to view. This command will display 
+detailed information about the specified commit, including the commit message, author, date, and the 
+changes introduced by that commit. 
+For example: 
+$ git show abc123 
+2. Using git log: 
+$ git log -n 1 <commit-ID> 
+The -n 1 option tells Git to show only one commit. Replace <commit-ID> with the actual commit ID. 
+This command will display a condensed view of the specified commit, including its commit message, 
+author, date, and commit ID. 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+17 
+Experiment 10. 
+Analyzing and Changing Git History 
+Write the command to undo the changes introduced by the commit with the ID "abc123". 
+Solution: 
+To undo the changes introduced by a specific commit with the ID "abc123" in Git, you can use the 
+git revert command. The git revert command creates a new commit that undoes the changes made by 
+the specified commit, effectively "reverting" the commit. Here's the command: 
+$ git revert abc123 
+Replace "abc123" with the actual commit ID that you want to revert. After running this command, 
+Git will create a new commit that negates the changes introduced by the specified commit. This is a 
+safe way to undo changes in Git because it preserves the commit history and creates a new commit to 
+record the reversal of the changes. 
+Once you give the command revert it will ask you for the type the message in new window type the 
+message for reverting and after the message 
+Type ctrl C 
+And Type  :qa!  
+ENTER  
+Which will delete the specific file you committed 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+18 
+Experiment 11.  
+Collaboration and Remote Repositories:  
+Fetch the latest changes from a remote repository and rebase your local branch onto the 
+updated remote branch.  
+Solution:  
+To fetch the latest changes from a remote repository and rebase your local branch onto the updated 
+remote branch in Git, follow these steps:  
+1. 
+2. 
+Open your terminal or command prompt.  
+Make sure you are in the local branch that you want to rebase. You can switch to the branch 
+using the following command, replacing <branch-name> with your actual branch name:  
+$ git checkout <branch-name>  
+1. 
+Fetch the latest changes from the remote repository. This will update your local repository 
+with the changes from the remote without merging them into your local branch:  
+$ git fetch origin  
+Here, origin is the default name for the remote repository. If you have multiple remotes, replace 
+origin with the name of the specific remote you want to fetch from.  
+1. 
+branch:  
+Once you have fetched the latest changes, rebase your local branch onto the updated remote 
+$ git rebase origin/<branch-name>  
+Replace <branch-name> with the name of the remote branch you want to rebase onto. This command 
+will reapply your local commits on top of the latest changes from the remote branch, effectively 
+incorporating the remote changes into your branch history.  
+Resolve any conflicts that may arise during the rebase process. Git will stop and notify you if there 
+are conflicts that need to be resolved. Use a text editor to edit the conflicting files, save the changes, 
+and then continue the rebase with:  
+$ git rebase --continue  
+ After resolving any conflicts and completing the rebase, you have successfully updated your 
+local branch with the latest changes from the remote branch.  
+ If you want to push your rebased changes to the remote repository, use the git push 
+command. However, be cautious when pushing to a shared remote branch, as it can 
+potentially overwrite other developers' changes:  
+$ git push origin <branch-name>  
+Replace <branch-name> with the name of your local branch. By following these steps, you can keep 
+your local branch up to date with the latest changes from the remote repository and maintain a clean 
+and linear history through rebasing. 
+3rd Sem, AIML, Project Management with GitLab MANUAL 
+19 
+Experiment 12.  
+Analysing and Changing Git History  
+Write the command to display the last five commits in the repository's history.  
+Solution:  
+To display the last five commits in a Git repository's history, you can use the git log command with 
+the -n option, which limits the number of displayed commits. Here's the command:  
+$ git log -n 5  
+This command will show the last five commits in the repository's history. You can adjust the number 
+after -n to display a different number of commits if needed.
